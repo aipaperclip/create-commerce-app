@@ -4,7 +4,15 @@ import cmd = require('../src')
 
 describe('Create commerce app cli', () => {
   const argName = "appName";
-  
+  const appName = "test-app"
+
+  test
+    .stdout()
+    .do(() => cmd.run(['test-app']))
+    .it('runs with appname', ctx => {
+      expect(ctx.stdout).to.contain(`Created ${appName}`)
+    })
+
   test
     .stdout()
     .do(() => cmd.run([]))
