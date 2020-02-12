@@ -10,7 +10,7 @@ import { SAMPLE_APPS_GIT_REPO_URL } from './constants'
  * 
  */
 class CreateCommerceApp extends Command {
-  static description = 'Creates a new Headless Commerce Application'
+  static description = 'Creates a new Salesforce Commerce Application'
 
   static flags = {
     help: flags.help({
